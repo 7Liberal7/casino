@@ -1,0 +1,527 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input {
+  border: none;
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a,
+button,
+input,
+textarea {
+  outline: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Montserrat';
+}
+
+.container {
+  max-width: 1445px;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+.header {
+  background: transparent linear-gradient(273deg, #4A0690 0%, #4A0690 16%, #A82870 100%) 0% 0% no-repeat padding-box;
+  height: 70px;
+
+  &__container {
+    max-width: 1630px;
+    padding: 12px 15px;
+    margin: 0 auto;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.logo {
+  width: 200px;
+  height: 50px;
+
+  &__img {
+    width: 200px;
+    height: 50px;
+  }
+}
+
+.btn-login {
+  padding: 13px 26px;
+  color: #fff;
+  border: 3px solid #FFFFFF;
+  background: #4B0690 0% 0% no-repeat padding-box;
+  border-radius: 25px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+}
+
+.btn {
+  padding: 13px 26px;
+  font-size: 16px;
+  line-height: 19px;
+  background: #FFD338 0% 0% no-repeat padding-box;
+  border-radius: 25px;
+  color: #1D0731;
+  font-weight: 900;
+
+  &__big {
+    font-size: 36px;
+    padding: 25px 40px;
+    list-style: 40px;
+    border-radius: 50px;
+    margin: 0 auto;
+    width: fit-content;
+    font-weight: 700;
+  }
+}
+
+.first-screen {
+  &__bg {
+    background-image: url("../images/dist/first-screen-bg.png");
+    height: 54vh;
+    min-width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.title {
+  font-size: 45px;
+  color: #EDEDED;
+  font-weight: 700;
+  line-height: 55px;
+  text-align: center;
+}
+
+.social-casino {
+  padding: 55px 0;
+  padding-bottom: 0;
+  width: 100%;
+  background: #540D5D 0% 0% no-repeat padding-box;
+
+  &__title {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 55px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 37px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+
+  &__btn1 {
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    width: fit-content;
+  }
+}
+
+.casino-benefits {
+  margin-bottom: 130px;
+
+  &__list {
+    display: flex;
+    gap: 120px;
+
+  }
+
+  &__item {
+    height: 405px;
+    width: 380px;
+    position: relative;
+  }
+
+  &__item-number {
+    font-size: 55px;
+    padding: 0 25px;
+    border-radius: 100%;
+    background: #4A0690 0% 0% no-repeat padding-box;
+    border: 8px solid #EDEDED;
+    text-align: center;
+    color: #EDEDED;
+    font-weight: 700;
+    width: fit-content;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__item-img {
+    margin-bottom: 10px;
+  }
+
+  &__item-text {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    color: #EDEDED;
+    text-align: center;
+  }
+
+  &__item-text-yellow {
+    text-transform: uppercase;
+    color: #FFD338;
+  }
+
+  &__item-text-green {
+    text-transform: uppercase;
+    color: #03FF00;
+  }
+
+  &__item::after {
+    content: '';
+    height: 200px;
+    width: 7px;
+    background-color: #FFD338;
+    top: 17px;
+    right: -70px;
+    transform: rotate(-30deg);
+    position: absolute;
+  }
+
+  &__item::before {
+    content: '';
+    height: 200px;
+    width: 7px;
+    background-color: #FFD338;
+    bottom: 17px;
+    right: -70px;
+    transform: rotate(30deg);
+    position: absolute;
+  }
+
+  &__item:last-child::after {
+    display: none;
+  }
+
+  &__item:last-child::before {
+    display: none;
+  }
+}
+
+.casino-style {
+  background: #6D1F77 0% 0% no-repeat padding-box;
+  max-width: 1740px;
+  width: 100%;
+  max-height: 820px;
+  height: 100%;
+  border-radius: 30px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 70px;
+
+  &__list {
+    margin: 70px 0;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  &__item {
+    width: 445px;
+    height: 445px;
+    border: 5px solid #FFFFFF;
+    border-radius: 30px;
+    padding: 25px 35px;
+  }
+
+  &__item-img {
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+
+  &__item-title {
+    font-size: 19px;
+    line-height: 25px;
+    color: #EDEDED;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &__item-text {
+    font-size: 18px;
+    line-height: 25px;
+    color: #EDEDED;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    font-weight: 400;
+  }
+
+  &__btn {
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+
+.top-winners {
+  padding-top: 60px;
+  padding-bottom: 260px;
+  background-image: url("../images/dist/top-winners-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  &__title {
+    font-size: 55px;
+    line-height: 55px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+    color: #FFCE29;
+    font-weight: 700;
+    margin-bottom: 35px;
+  }
+
+  &__subtitle {
+    color: #EDEDED;
+    font-size: 35px;
+    line-height: 35px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  &__item {
+    height: 480px;
+    width: 430px;
+  }
+
+  &__item-first {
+    width: 475px;
+  }
+
+  &__item-number {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  &__item-img-container {
+    border: 5px solid #FFFFFF;
+    border-radius: 30px;
+    opacity: 1;
+    margin-bottom: 30px;
+  }
+
+  &__item-img {
+    height: 270px;
+    width: 430px;
+    border-radius: 30px;
+    size: cover;
+  }
+
+  &__item-img-first {
+    width: 475px;
+    height: 300px;
+  }
+
+  &__item-text {
+    font-size: 22px;
+    line-height: 25px;
+    color: #EDEDED;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__item-first {
+    transform: translateY(-60px);
+  }
+}
+
+.about-us {
+  background-color: #38073E;
+  padding: 90px 0;
+
+  &__list {
+    margin-top: 120px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  &__item {
+    width: 385px;
+    height: 350px;
+    position: relative;
+    background: #653E89 0% 0% no-repeat padding-box;
+    border: 3px solid #542F6A;
+    padding: 20px;
+  }
+
+  &__item-center {
+    transform: translateY(-30px);
+    width: 385px;
+    height: 410px;
+  }
+
+  &__item-span {
+    font-size: 130px;
+    font-weight: 700;
+    color: #FFD338;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    transform: translateY(-25px);
+  }
+
+  &__item-text {
+    font-size: 23px;
+    line-height: 29px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: -85px;
+    margin-bottom: 5px;
+  }
+
+  &__item-author {
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFD338;
+    font-weight: 400;
+  }
+
+  &__item-region {
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFD338;
+    font-weight: 400;
+  }
+
+  &__btn-container {
+    width: fit-content;
+    margin: 0 auto;
+    background: #FFD33800 0% 0% no-repeat padding-box;
+    border: 2px solid #FFD338;
+    border-radius: 37px;
+  }
+
+  &__btn {
+    text-align: center;
+    display: block;
+  }
+
+  &__btn-wrap {
+    display: flex;
+    gap: 15px;
+    padding: 25px 40px;
+    width: 375px;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  &__btn-text{
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFD338;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 130px;
+    text-align: center;
+    display: block;
+  }
+  &__btn-img{
+    height: 25px;
+    width: 145px;
+  }
+}
