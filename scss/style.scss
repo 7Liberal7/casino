@@ -1,0 +1,888 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input {
+  border: none;
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a,
+button,
+input,
+textarea {
+  outline: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Montserrat';
+}
+
+.container {
+  max-width: 1445px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.header {
+  background: transparent linear-gradient(273deg, #4A0690 0%, #4A0690 16%, #A82870 100%) 0% 0% no-repeat padding-box;
+  height: 70px;
+
+  &__container {
+    max-width: 1630px;
+    padding: 12px 15px;
+    margin: 0 auto;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.logo {
+  width: 200px;
+  height: 50px;
+
+  &__img {
+    width: 200px;
+    height: 50px;
+  }
+}
+
+.btn-login {
+  padding: 13px 26px;
+  color: #fff;
+  border: 3px solid #FFFFFF;
+  background: #4B0690 0% 0% no-repeat padding-box;
+  border-radius: 25px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+}
+
+.btn {
+  padding: 13px 26px;
+  font-size: 16px;
+  line-height: 19px;
+  background: #FFD338 0% 0% no-repeat padding-box;
+  border-radius: 25px;
+  color: #1D0731;
+  font-weight: 900;
+
+  &__big {
+    font-size: 36px;
+    padding: 25px 40px;
+    list-style: 40px;
+    border-radius: 50px;
+    margin: 0 auto;
+    width: fit-content;
+    font-weight: 700;
+  }
+}
+
+.first-screen {
+  &__bg {
+    background-image: url("../images/dist/first-screen-bg.png");
+    height: 54vh;
+    min-width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.title {
+  font-size: 45px;
+  color: #EDEDED;
+  font-weight: 700;
+  line-height: 55px;
+  text-align: center;
+}
+
+.social-casino {
+  padding: 55px 0;
+  padding-bottom: 0;
+  width: 100%;
+  background: #540D5D 0% 0% no-repeat padding-box;
+
+  &__title {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 55px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 37px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+
+  &__btn1 {
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    width: fit-content;
+  }
+}
+
+.casino-benefits {
+  margin-bottom: 110px;
+  &__list {
+    display: flex;
+    gap: 120px;
+    height: fit-content;
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+  &__item {
+    height: 270px;
+    width: 250px;
+    position: relative;
+  }
+
+  &__item-number {
+    font-size: 35px;
+    padding: 0 25px;
+    border-radius: 100%;
+    background: #4A0690 0% 0% no-repeat padding-box;
+    border: 8px solid #EDEDED;
+    text-align: center;
+    color: #EDEDED;
+    font-weight: 700;
+    width: fit-content;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__item-img {
+    margin-bottom: 10px;
+  }
+
+  &__item-text {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    color: #EDEDED;
+    text-align: center;
+  }
+
+  &__item-text-yellow {
+    text-transform: uppercase;
+    color: #FFD338;
+  }
+
+  &__item-text-green {
+    text-transform: uppercase;
+    color: #03FF00;
+  }
+
+  &__item::after {
+    content: '';
+    height: 400px;
+    width: 120px;
+    background-image: url('../images/dist/arrow.svg');
+    background-size: contain;
+    position: absolute;
+    top: -5px;
+    right: -110px;
+    background-repeat: no-repeat;
+  }
+
+  &__item:last-child::after {
+    display: none;
+  }
+}
+
+.casino-style {
+  background: #6D1F77 0% 0% no-repeat padding-box;
+  max-width: 1740px;
+  width: 100%;
+  max-height: 820px;
+  height: 100%;
+  border-radius: 30px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 70px;
+
+  &__list {
+    margin: 70px 0;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  &__item {
+    width: 445px;
+    height: 445px;
+    border: 5px solid #FFFFFF;
+    border-radius: 30px;
+    padding: 25px 35px;
+  }
+
+  &__item-img {
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+
+  &__item-title {
+    font-size: 19px;
+    line-height: 25px;
+    color: #EDEDED;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &__item-text {
+    font-size: 18px;
+    line-height: 25px;
+    color: #EDEDED;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    font-weight: 400;
+  }
+
+  &__btn {
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+
+.top-winners {
+  padding-top: 60px;
+  padding-bottom: 260px;
+  background-image: url("../images/dist/top-winners-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  &__title {
+    font-size: 55px;
+    line-height: 55px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+    color: #FFCE29;
+    font-weight: 700;
+    margin-bottom: 35px;
+  }
+
+  &__subtitle {
+    color: #EDEDED;
+    font-size: 35px;
+    line-height: 35px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  &__item {
+    height: 480px;
+    width: 430px;
+  }
+
+  &__item-first {
+    width: 475px;
+  }
+
+  &__item-number {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  &__item-img-container {
+    border: 5px solid #FFFFFF;
+    border-radius: 30px;
+    opacity: 1;
+    margin-bottom: 30px;
+  }
+
+  &__item-img {
+    height: 270px;
+    width: 430px;
+    border-radius: 30px;
+    size: cover;
+  }
+
+  &__item-img-first {
+    width: 475px;
+    height: 300px;
+  }
+
+  &__item-text {
+    font-size: 22px;
+    line-height: 25px;
+    color: #EDEDED;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__item-first {
+    transform: translateY(-60px);
+  }
+}
+
+.about-us {
+  background-color: #38073E;
+  padding: 90px 0;
+
+  &__list {
+    margin-top: 120px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  &__item {
+    width: 385px;
+    height: 350px;
+    position: relative;
+    background: #653E89 0% 0% no-repeat padding-box;
+    border: 3px solid #542F6A;
+    padding: 20px;
+  }
+
+  &__item::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 300px;
+    border: 50px solid transparent;
+    border-top: 40px solid #653E89;
+    border-left: 100px solid #653E89;
+  }
+
+  &__item-center {
+    transform: translateY(-30px);
+    width: 385px;
+    height: 410px;
+  }
+
+  &__item-center::after {
+    top: 360px;
+  }
+
+  &__item-span {
+    font-size: 130px;
+    font-weight: 700;
+    color: #FFD338;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    transform: translateY(-25px);
+  }
+
+  &__item-text {
+    font-size: 23px;
+    line-height: 29px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: -85px;
+    margin-bottom: 5px;
+  }
+
+  &__item-author {
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFD338;
+    font-weight: 400;
+  }
+
+  &__item-region {
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFD338;
+    font-weight: 400;
+  }
+
+  &__btn-container {
+    width: fit-content;
+    margin: 0 auto;
+    background: #FFD33800 0% 0% no-repeat padding-box;
+    border: 2px solid #FFD338;
+    border-radius: 37px;
+  }
+
+  &__btn {
+    text-align: center;
+    display: block;
+  }
+
+  &__btn-wrap {
+    display: flex;
+    padding: 20px 40px;
+    width: 375px;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__btn-text {
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFD338;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 130px;
+    text-align: center;
+    display: block;
+    transform: translateY(10px);
+  }
+
+  &__btn-img {
+    height: 35px;
+    width: 145px;
+  }
+}
+
+.dep {
+  padding: 75px 0;
+  background-image: url('../images/dist/dep-bg.png');
+  z-index: 10;
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin: 40px auto;
+  }
+
+  &__item {
+    height: 300px;
+    border: 2px solid #FFFFFF;
+    width: 300px;
+    border-radius: 10px;
+  }
+
+  &__item-top {
+    width: 100%;
+    height: 220px;
+    padding: 20px 40px;
+    background: transparent linear-gradient(0deg, #2E2E2E 0%, #2E2E2E 8%, #151414 53%, #2E2E2E 96%, #2E2E2E 100%) 0% 0% no-repeat padding-box;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__item-top-img {
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  &__item-top-price {
+    color: #F8D459;
+    font-size: 29px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__item-top-btn {
+    padding: 15px 50px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    background: transparent linear-gradient(0deg, #3EA619 0%, #1B6700 44%, #3EA619 100%) 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+    margin-left: 10px;
+  }
+
+  &__item-bottom {
+    background: transparent linear-gradient(0deg, #38214B 0%, #38214B 6%, #0F4F42 52%, #38214B 94%, #38214B 100%) 0% 0% no-repeat padding-box;
+    border: 1px solid transparent;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 78px;
+    width: 100%;
+  }
+
+  &__item-bottom-text {
+    text-align: center;
+    font-size: 21px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-top: 25px;
+    font-weight: 700;
+  }
+
+  &__item-bottom-strong {
+    color: #27E55C;
+  }
+
+  &__btn-wrap {
+    margin: 0 auto;
+    width: fit-content;
+  }
+}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 90px;
+  background-color: #1D0731;
+
+  &__wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    max-width: 1180px;
+    font-size: 12px;
+    line-height: 21px;
+    text-align: center;
+    color: #A4B1C5;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: #FFD338;
+  }
+
+  &__ages {
+    display: flex;
+    max-width: fit-content;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  &__ages-text {
+    font-size: 14px;
+    line-height: 24px;
+    color: #A4B1C5;
+    font-weight: 500;
+  }
+
+  &__ages-img {
+    height: 40px;
+    width: 40px;
+    margin: 0 5px;
+    transform: translateY(-6px);
+  }
+
+  &__policy {
+    display: flex;
+    max-width: fit-content;
+    gap: 15px;
+    margin: 0 auto;
+    margin-bottom: -10px;
+  }
+
+  &__policy-link {
+    color: #A4B1C5;
+    font-size: 12px;
+    line-height: 20px;
+    text-decoration: underline;
+    font-weight: 500;
+    transform: translateY(15px);
+    height: fit-content;
+  }
+
+  &__text-big1 {
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+    color: #A4B1C5;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 500;
+    margin-top: 40px;
+  }
+
+  &__text-big2 {
+    max-width: 810px;
+    margin: 0 auto;
+    text-align: center;
+    color: #A4B1C5;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 500;
+    margin-top: 20px;
+  }
+}
+
+.footer-info {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+
+  &__images-logo-img {
+    width: 260px;
+    height: 67px;
+    margin-bottom: 30px;
+  }
+
+  &__social-list {
+    display: flex;
+    gap: 10px;
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+  &__text {
+    max-width: 570px;
+    font-size: 16px;
+    color: #A4B1C5;
+    font-weight: 500;
+    line-height: 28px;
+  }
+
+  &__links {
+    max-width: 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__links-link {
+    font-size: 14px;
+    text-decoration: underline;
+    color: #FFD338;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .footer-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 990px) {
+  .title {
+    font-size: 30px;
+  }
+
+  .btn {
+    &__big {
+      font-size: 30px;
+      padding: 20px 30px;
+    }
+  }
+
+  .casino-benefits {
+    &__item::after {
+      display: none;
+    }
+
+    &__list {
+      flex-direction: column;
+      gap: 50px;
+      width: fit-content;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+  }
+
+  .casino-style {
+    max-height: fit-content;
+
+    &__list {
+      flex-direction: column;
+      width: fit-content;
+      margin: 30px auto;
+
+    }
+  }
+
+  .top-winners {
+    padding-bottom: 60px;
+
+    &__list {
+      display: grid;
+      gap: 0;
+    }
+
+    &__item {
+      width: fit-content;
+    }
+
+    &__item-img-container {
+      width: fit-content;
+
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    &__item:first-child {
+      grid-row-start: 2;
+    }
+
+    &__item-first {
+      grid-row-start: 1;
+      transform: translateY(0);
+    }
+
+    &__item-img {
+      width: 300px;
+      height: 200px;
+    }
+  }
+
+  .about-us {
+
+    &__list {
+      flex-direction: column;
+      gap: 60px;
+      width: fit-content;
+      margin: 70px auto;
+    }
+
+    &__btn-wrap {
+      padding: 10px 20px;
+      width: 330px;
+    }
+
+    &__item {
+      width: 350px;
+    }
+
+    &__item-center {
+      transform: translateY(0);
+    }
+  }
+
+  .dep {
+    &__list {
+      flex-direction: column;
+      margin: 40px auto;
+      width: fit-content;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .header {
+    height: 150px;
+
+    &__container {
+      flex-direction: column;
+      width: fit-content;
+      gap: 20px;
+    }
+  }
+
+  .casino-style {
+
+    &__item {
+      width: 300px;
+      height: fit-content;
+      padding: 10px 15px;
+    }
+
+    &__item-title {
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+
+    &__item-text {
+      font-size: 12px;
+    }
+
+    &__item-img {
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+}
